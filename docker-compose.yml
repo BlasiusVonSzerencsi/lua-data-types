@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  lua:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workdir
+    command: bash -c "cd /workdir && busted"
